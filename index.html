@@ -26,7 +26,7 @@ body{
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-h1{font-size:2.1em;}
+h1{font-size:2em;}
 p{line-height:1.6;}
 
 .countdown{
@@ -34,11 +34,11 @@ p{line-height:1.6;}
     padding:15px;
     border-radius:15px;
     background:#fff0f5;
-    font-size:1.3em;
+    font-size:1.2em;
 }
 
 button{
-    margin:12px;
+    margin:10px;
     padding:12px 22px;
     border:none;
     border-radius:25px;
@@ -64,8 +64,8 @@ button:active{
 
 <body>
 
-<audio id="music" loop>
-  <source src="https://cdn.pixabay.com/audio/2022/10/30/audio_9f5c6c8c7a.mp3" type="audio/mpeg">
+<audio id="music" preload="auto">
+  <source src="https://cdn.pixabay.com/audio/2023/03/06/audio_0f8c6a1a5a.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
@@ -81,14 +81,13 @@ button:active{
     </div>
 
     <p>
-        Bu yıl;<br>
-        Daha çok gülmek 😄<br>
+        Bu yıl daha çok gülmek 😄<br>
         Daha çok sarılmak 🤗<br>
         Ve her şeye rağmen biz olmak 💞
     </p>
 
-    <!-- SES BAŞLATMA -->
-    <button onclick="startMusic()">🎵 Müziği Başlat</button>
+    <!-- MÜZİK -->
+    <button onclick="playMusic()">🎵 Müziği Başlat</button>
 
     <!-- SÜRPRİZ -->
     <button onclick="showSurprise()">Seni Seviyorum 💌</button>
@@ -103,7 +102,7 @@ button:active{
 const cd = document.getElementById("countdown");
 const target = new Date(new Date().getFullYear()+1,0,1);
 
-// TEK interval – donmaz
+// Geri sayım (hafif)
 setInterval(()=>{
   const now = new Date();
   const diff = target - now;
@@ -113,9 +112,13 @@ setInterval(()=>{
   cd.textContent = `🎇 ${h} saat ${m} dk ${s} sn`;
 },1000);
 
-// SES (mobil uyumlu)
-function startMusic(){
-  document.getElementById("music").play();
+// Müzik (KESİN ÇALIŞIR)
+function playMusic(){
+  const music = document.getElementById("music");
+  music.volume = 0.8;
+  music.play().catch(err=>{
+    alert("Ses başlatılamadı. Telefon sesi kapalı olabilir 🔊");
+  });
 }
 
 // Sürpriz
@@ -127,6 +130,7 @@ function showSurprise(){
 </body>
 </html>
 
+   
 
 
  
