@@ -1,3 +1,6 @@
+📁 sevgilim
+ ├── index.html
+ └── Gokcan-Sanliman-Son-Romantik-9.mp3
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -29,14 +32,6 @@ body{
 h1{font-size:2em;}
 p{line-height:1.6;}
 
-.countdown{
-    margin:20px 0;
-    padding:15px;
-    border-radius:15px;
-    background:#fff0f5;
-    font-size:1.2em;
-}
-
 button{
     margin:10px;
     padding:12px 22px;
@@ -45,12 +40,8 @@ button{
     background:#ff5c8a;
     color:white;
     font-size:1em;
-    cursor:pointer;
 }
-
-button:active{
-    transform:scale(0.97);
-}
+button:active{transform:scale(0.97);}
 
 #surprise{
     display:none;
@@ -64,29 +55,20 @@ button:active{
 
 <body>
 
+<!-- MÜZİK -->
 <audio id="music" preload="auto">
-  <source src="https://cdn.pixabay.com/audio/2023/03/06/audio_0f8c6a1a5a.mp3" type="audio/mpeg">
+  <source src="Gokcan-Sanliman-Son-Romantik-9.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
     <h1>Yeni Yıla Seninle 💕</h1>
 
     <p>
-        Bazen zorlandık ama kopmadık 🤍<br>
-        Şimdi yeni bir yıla yeniden birlikte giriyoruz ✨
+        Bazen yollar ayrıldı ama kalpler kopmadı 🤍<br>
+        Yeni yıla yeniden birlikte giriyoruz ✨
     </p>
 
-    <div class="countdown" id="countdown">
-        🎆 Yeni yıla geri sayım...
-    </div>
-
-    <p>
-        Bu yıl daha çok gülmek 😄<br>
-        Daha çok sarılmak 🤗<br>
-        Ve her şeye rağmen biz olmak 💞
-    </p>
-
-    <!-- MÜZİK -->
+    <!-- MÜZİK BUTONU -->
     <button onclick="playMusic()">🎵 Müziği Başlat</button>
 
     <!-- SÜRPRİZ -->
@@ -94,34 +76,19 @@ button:active{
 
     <div id="surprise">
         Sen benim en güzel başlangıcımsın 💖<br>
-        Bu yıl da, her yıl da yanımda olmanı istiyorum 🌹
+        Bu yıl da her yıl da yanımda olmanı istiyorum 🌹
     </div>
 </div>
 
 <script>
-const cd = document.getElementById("countdown");
-const target = new Date(new Date().getFullYear()+1,0,1);
-
-// Geri sayım (hafif)
-setInterval(()=>{
-  const now = new Date();
-  const diff = target - now;
-  const h = Math.floor(diff/1000/60/60);
-  const m = Math.floor(diff/1000/60)%60;
-  const s = Math.floor(diff/1000)%60;
-  cd.textContent = `🎇 ${h} saat ${m} dk ${s} sn`;
-},1000);
-
-// Müzik (KESİN ÇALIŞIR)
 function playMusic(){
-  const music = document.getElementById("music");
-  music.volume = 0.8;
-  music.play().catch(err=>{
-    alert("Ses başlatılamadı. Telefon sesi kapalı olabilir 🔊");
+  const m = document.getElementById("music");
+  m.volume = 1.0;
+  m.play().catch(()=>{
+    alert("Telefon sessizde olabilir 🔊");
   });
 }
 
-// Sürpriz
 function showSurprise(){
   document.getElementById("surprise").style.display="block";
 }
@@ -129,6 +96,7 @@ function showSurprise(){
 
 </body>
 </html>
+
 
    
 
