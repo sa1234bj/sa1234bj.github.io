@@ -2,107 +2,190 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>💖 Sana Küçük Bir Sürpriz 💖</title>
+<title>Yeni Yıla Seninle 💕</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(135deg, #ffd1dc, #ff9ecb);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9a9e,#fecfef,#ffe4e1);
+    font-family:'Segoe UI',sans-serif;
+    color:#5a1a2c;
+    overflow:hidden;
+}
 
-    .card {
-        background: #fff;
-        width: 90%;
-        max-width: 500px;
-        padding: 30px;
-        border-radius: 25px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        text-align: center;
-    }
+.container{
+    background:rgba(255,255,255,0.95);
+    max-width:650px;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+    animation:fadeIn 2s ease;
+}
 
-    h1 {
-        color: #ff4f9a;
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
 
-    p {
-        color: #444;
-        font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
+h1{font-size:2.3em;}
+h2{font-weight:400;}
 
-    .heart {
-        font-size: 40px;
-        animation: pulse 1.5s infinite;
-    }
+p{
+    font-size:1.05em;
+    line-height:1.7;
+    margin:15px 0;
+}
 
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.2); }
-        100% { transform: scale(1); }
-    }
+.divider{
+    height:2px;
+    width:60%;
+    margin:25px auto;
+    background:linear-gradient(to right,transparent,#ff69b4,transparent);
+}
 
-    .footer {
-        margin-top: 20px;
-        font-size: 14px;
-        color: #777;
-    }
+.countdown{
+    font-size:1.4em;
+    margin:20px 0;
+    padding:15px;
+    border-radius:15px;
+    background:#fff0f5;
+}
 
-    button {
-        background: #ff4f9a;
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        border-radius: 20px;
-        font-size: 15px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+.newyear{
+    background:#ffeaf2;
+    padding:20px;
+    border-radius:18px;
+    margin-top:25px;
+}
 
-    button:hover {
-        background: #e84388;
-    }
+button{
+    margin-top:25px;
+    padding:14px 28px;
+    border:none;
+    border-radius:30px;
+    background:#ff5c8a;
+    color:white;
+    font-size:1.1em;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff336d;
+    transform:scale(1.05);
+}
+
+#surprise{
+    display:none;
+    margin-top:20px;
+    font-size:1.1em;
+    background:#fff0f7;
+    padding:15px;
+    border-radius:15px;
+}
+
+.heart{
+    position:absolute;
+    color:#ff5c8a;
+    animation:float 6s linear infinite;
+    opacity:0.8;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh) scale(0.8);}
+    100%{transform:translateY(-10vh) scale(1.2);}
+}
 </style>
 </head>
+
 <body>
 
-<div class="card">
-    <div class="heart">💗</div>
+<!-- Arka Plan Müzik -->
+<audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/10/30/audio_9f5c6c8c7a.mp3" type="audio/mpeg">
+</audio>
 
-    <h1>Sana Küçük Bir Sürpriz 🌸</h1>
+<div class="container">
+    <h1>Yeni Yıla Seninle 💕</h1>
+    <h2>Kalbimden sana…</h2>
 
     <p>
-        Bazen bir insan, bir gülümsemesiyle bile günü güzelleştirebilir 🌷  
-        Sen benim için tam olarak öylesin.
+        Bazen ayrıldık, bazen sustuk…<br>
+        ama hiçbir zaman tamamen vazgeçmedik 🤍
     </p>
 
     <p>
-        Ne zaman adını duysam,  
-        içimde sebepsiz bir mutluluk oluyor 💕  
-        Bunu bilmeni istedim.
+        Şimdi yeniden,<br>
+        yeni bir yılın eşiğinde,<br>
+        <strong>birlikteyiz</strong> ✨
     </p>
 
-    <p>
-        Bu sayfa sadece sana özel ✨  
-        Çünkü sen de benim için özelsin.
-    </p>
+    <div class="divider"></div>
 
-    <button onclick="alert('İyi ki varsın 💖')">
-        Bana Tıkla 😊
-    </button>
+    <div class="countdown" id="countdown">
+        🎆 Yeni yıla geri sayım…
+    </div>
 
-    <div class="footer">
-        🌸 Her şey kalpten 🌸
+    <div class="newyear">
+        <p>
+            Bu yıl;<br>
+            Daha çok gülmek 😄<br>
+            Daha az üzülmek 🌷<br>
+            Daha çok sarılmak 🤗<br>
+            Ve her şeye rağmen <strong>biz kalabilmek</strong> 💞
+        </p>
+    </div>
+
+    <button onclick="showSurprise()">Seni Seviyorum 💌</button>
+
+    <div id="surprise">
+        Sen benim en güzel başlangıcımsın 💖<br>
+        Bu yıl da, her yıl da…<br>
+        <strong>yanımda olmanı istiyorum</strong> 🌹
     </div>
 </div>
 
+<script>
+// Geri Sayım
+const countdownEl = document.getElementById("countdown");
+const newYear = new Date(new Date().getFullYear()+1,0,1);
+
+setInterval(()=>{
+    const now = new Date();
+    const diff = newYear - now;
+    const d = Math.floor(diff/1000/60/60/24);
+    const h = Math.floor(diff/1000/60/60)%24;
+    const m = Math.floor(diff/1000/60)%60;
+    const s = Math.floor(diff/1000)%60;
+    countdownEl.innerHTML = `🎇 Yeni yıla: ${d}g ${h}s ${m}d ${s}sn`;
+},1000);
+
+// Sürpriz
+function showSurprise(){
+    document.getElementById("surprise").style.display="block";
+}
+
+// Kalpler
+setInterval(()=>{
+    const heart = document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="💖";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*20+15)+"px";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+},500);
+</script>
+
 </body>
 </html>
+
+
+
 
