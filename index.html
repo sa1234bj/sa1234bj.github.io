@@ -4,57 +4,120 @@
 <meta charset="UTF-8">
 <title>Yeni Yıla Seninle 💕</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body{
-  margin:0; min-height:100vh;
-  display:flex; justify-content:center; align-items:center;
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   background:linear-gradient(135deg,#ff9a9e,#fecfef);
-  font-family:Arial, sans-serif; color:#5a1a2c;
+  font-family:Arial, sans-serif;
+  color:#5a1a2c;
 }
+
 .container{
-  background:#fff; max-width:600px; padding:25px;
-  border-radius:20px; text-align:center;
-  box-shadow:0 8px 20px rgba(0,0,0,.2);
+  background:#fff;
+  max-width:600px;
+  padding:28px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
-h1{font-size:2em}
-p{line-height:1.6}
+
+h1{
+  font-size:2.1em;
+  margin-bottom:10px;
+}
+
+p{
+  line-height:1.7;
+  font-size:1.05em;
+  margin:14px 0;
+}
+
+.divider{
+  width:60%;
+  height:2px;
+  margin:22px auto;
+  background:linear-gradient(to right,transparent,#ff69b4,transparent);
+}
+
+button{
+  margin-top:18px;
+  padding:14px 26px;
+  border:none;
+  border-radius:30px;
+  background:#ff5c8a;
+  color:#fff;
+  font-size:1.05em;
+  cursor:pointer;
+}
+
+button:active{
+  transform:scale(0.97);
+}
+
+#message{
+  display:none;
+  margin-top:18px;
+  background:#ffeaf2;
+  padding:18px;
+  border-radius:16px;
+  font-size:1.05em;
+}
+
+footer{
+  margin-top:22px;
+  font-size:0.95em;
+}
 </style>
 </head>
 
-<body onclick="startMusic()">
-<audio id="music" preload="auto">
-  <source src="Gokcan-Sanliman-Son-Romantik-9.mp3" type="audio/mpeg">
-</audio>
+<body>
 
 <div class="container">
   <h1>Yeni Yıla Seninle 💕</h1>
+
   <p>
-    Bazen yollar ayrıldı ama kalpler kopmadı 🤍<br>
-    Yeni yıla yeniden, umutla giriyoruz ✨
+    Bazen yollar ayrıldı,<br>
+    bazen suskunluklar oldu…<br>
+    ama kalpler hiçbir zaman kopmadı 🤍
   </p>
+
+  <div class="divider"></div>
+
   <p>
-    Bu yıl daha çok gülmek 😄<br>
-    Daha çok sarılmak 🤗<br>
-    Ve her şeye rağmen biz olmak 💞
+    Şimdi yeni bir yılın eşiğinde,<br>
+    yeniden el ele,<br>
+    yeniden umutla ✨
   </p>
-  <p>
+
+  <!-- MESAJ BUTONU -->
+  <button onclick="showMessage()">Mesajı Gör 💌</button>
+
+  <!-- GİZLİ MESAJ -->
+  <div id="message">
     Sen benim en güzel başlangıcımsın 💖<br>
-    Bu yıl da her yıl da yanımda olmanı istiyorum 🌹
-  </p>
+    Bu yıl da, her yıl da…<br>
+    Yanımda olmanı istiyorum 🌹
+  </div>
+
+  <footer>
+    Mutlu yıllar sevgilim 🎆
+  </footer>
 </div>
 
 <script>
-let started=false;
-function startMusic(){
-  if(started) return;
-  const m=document.getElementById('music');
-  m.volume=1.0;
-  m.play().catch(()=>{});
-  started=true;
+function showMessage(){
+  document.getElementById("message").style.display = "block";
 }
 </script>
+
 </body>
 </html>
+
 
 
 
