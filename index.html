@@ -12,180 +12,134 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#ff9a9e,#fecfef,#ffe4e1);
-    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fecfef);
+    font-family:Arial, sans-serif;
     color:#5a1a2c;
     overflow:hidden;
 }
 
 .container{
-    background:rgba(255,255,255,0.95);
-    max-width:650px;
-    padding:35px;
-    border-radius:25px;
+    background:white;
+    max-width:600px;
+    padding:30px;
+    border-radius:20px;
     text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
-    animation:fadeIn 2s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-h1{font-size:2.3em;}
-h2{font-weight:400;}
-
-p{
-    font-size:1.05em;
-    line-height:1.7;
-    margin:15px 0;
-}
-
-.divider{
-    height:2px;
-    width:60%;
-    margin:25px auto;
-    background:linear-gradient(to right,transparent,#ff69b4,transparent);
-}
+h1{font-size:2.2em;}
+p{line-height:1.6;}
 
 .countdown{
-    font-size:1.4em;
     margin:20px 0;
     padding:15px;
     border-radius:15px;
     background:#fff0f5;
-}
-
-.newyear{
-    background:#ffeaf2;
-    padding:20px;
-    border-radius:18px;
-    margin-top:25px;
+    font-size:1.3em;
 }
 
 button{
-    margin-top:25px;
-    padding:14px 28px;
+    margin-top:20px;
+    padding:12px 25px;
     border:none;
-    border-radius:30px;
+    border-radius:25px;
     background:#ff5c8a;
     color:white;
     font-size:1.1em;
     cursor:pointer;
-    transition:0.3s;
 }
 
-button:hover{
-    background:#ff336d;
-    transform:scale(1.05);
-}
+button:hover{background:#ff336d;}
 
 #surprise{
     display:none;
-    margin-top:20px;
-    font-size:1.1em;
-    background:#fff0f7;
+    margin-top:15px;
+    background:#ffeaf2;
     padding:15px;
     border-radius:15px;
 }
 
 .heart{
-    position:absolute;
-    color:#ff5c8a;
-    animation:float 6s linear infinite;
-    opacity:0.8;
+    position:fixed;
+    bottom:-20px;
+    animation:floatUp 6s linear forwards;
+    pointer-events:none;
 }
 
-@keyframes float{
-    0%{transform:translateY(100vh) scale(0.8);}
-    100%{transform:translateY(-10vh) scale(1.2);}
+@keyframes floatUp{
+    from{transform:translateY(0); opacity:1;}
+    to{transform:translateY(-110vh); opacity:0;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- Arka Plan Müzik -->
 <audio autoplay loop>
-    <source src="https://cdn.pixabay.com/audio/2022/10/30/audio_9f5c6c8c7a.mp3" type="audio/mpeg">
+  <source src="https://cdn.pixabay.com/audio/2022/10/30/audio_9f5c6c8c7a.mp3" type="audio/mpeg">
 </audio>
 
 <div class="container">
     <h1>Yeni Yıla Seninle 💕</h1>
-    <h2>Kalbimden sana…</h2>
 
     <p>
-        Bazen ayrıldık, bazen sustuk…<br>
-        ama hiçbir zaman tamamen vazgeçmedik 🤍
+        Bazen ayrıldık ama hiç kopmadık 🤍<br>
+        Şimdi yeni bir yıla, yeniden birlikte giriyoruz ✨
     </p>
-
-    <p>
-        Şimdi yeniden,<br>
-        yeni bir yılın eşiğinde,<br>
-        <strong>birlikteyiz</strong> ✨
-    </p>
-
-    <div class="divider"></div>
 
     <div class="countdown" id="countdown">
-        🎆 Yeni yıla geri sayım…
+        🎆 Yeni yıla geri sayım...
     </div>
 
-    <div class="newyear">
-        <p>
-            Bu yıl;<br>
-            Daha çok gülmek 😄<br>
-            Daha az üzülmek 🌷<br>
-            Daha çok sarılmak 🤗<br>
-            Ve her şeye rağmen <strong>biz kalabilmek</strong> 💞
-        </p>
-    </div>
+    <p>
+        Bu yıl daha çok gülmek 😄<br>
+        Daha çok sarılmak 🤗<br>
+        Ve her şeye rağmen biz olmak 💞
+    </p>
 
     <button onclick="showSurprise()">Seni Seviyorum 💌</button>
 
     <div id="surprise">
         Sen benim en güzel başlangıcımsın 💖<br>
-        Bu yıl da, her yıl da…<br>
-        <strong>yanımda olmanı istiyorum</strong> 🌹
+        Bu yıl da, her yıl da yanımda olmanı istiyorum 🌹
     </div>
 </div>
 
 <script>
-// Geri Sayım
-const countdownEl = document.getElementById("countdown");
-const newYear = new Date(new Date().getFullYear()+1,0,1);
+// Geri Sayım (hafif)
+const cd = document.getElementById("countdown");
+const target = new Date(new Date().getFullYear()+1,0,1);
 
 setInterval(()=>{
-    const now = new Date();
-    const diff = newYear - now;
-    const d = Math.floor(diff/1000/60/60/24);
-    const h = Math.floor(diff/1000/60/60)%24;
-    const m = Math.floor(diff/1000/60)%60;
-    const s = Math.floor(diff/1000)%60;
-    countdownEl.innerHTML = `🎇 Yeni yıla: ${d}g ${h}s ${m}d ${s}sn`;
+  const now = new Date();
+  const diff = target - now;
+  const h = Math.floor(diff/1000/60/60);
+  const m = Math.floor(diff/1000/60)%60;
+  const s = Math.floor(diff/1000)%60;
+  cd.textContent = `🎇 ${h} saat ${m} dk ${s} sn`;
 },1000);
 
-// Sürpriz
+// Buton
 function showSurprise(){
-    document.getElementById("surprise").style.display="block";
+  document.getElementById("surprise").style.display="block";
 }
 
-// Kalpler
+// Kalpler (optimize)
 setInterval(()=>{
-    const heart = document.createElement("div");
-    heart.className="heart";
-    heart.innerHTML="💖";
-    heart.style.left=Math.random()*100+"vw";
-    heart.style.fontSize=(Math.random()*20+15)+"px";
-    document.body.appendChild(heart);
-    setTimeout(()=>heart.remove(),6000);
-},500);
+  const h = document.createElement("div");
+  h.className="heart";
+  h.textContent="💖";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(Math.random()*10+16)+"px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},1200);
 </script>
 
 </body>
 </html>
 
 
+ 
 
-
+ 
