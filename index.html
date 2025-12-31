@@ -1,64 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samet Demir | Web Tasarım</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>💖 Sana Küçük Bir Sürpriz 💖</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ffd1dc, #ff9ecb);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .card {
+        background: #fff;
+        width: 90%;
+        max-width: 500px;
+        padding: 30px;
+        border-radius: 25px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        text-align: center;
+    }
+
+    h1 {
+        color: #ff4f9a;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: #444;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .heart {
+        font-size: 40px;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #777;
+    }
+
+    button {
+        background: #ff4f9a;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 20px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #e84388;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Samet Demir</h1>
-        <p>Hayallerimle kurduğum bir yolculuk bu...</p>
-        <nav>
-            <a href="#about">Hakkımda</a>
-            <a href="#projects">Projeler</a>
-            <a href="#gallery">Galeri</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">İletişim</a>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>Hakkımda</h2>
-        <p>Ben Samet, 17 yaşında web tasarım tutkunu bir gencim. Hayal ettiğim her şeyin peşinden koşuyorum. Bu site benim ilk adımım.</p>
-        <img src="https://placehold.co/600x300?text=Samet+Demir" alt="Samet Demir" style="width:100%;margin-top:20px;border-radius:8px;">
-    </section>
+<div class="card">
+    <div class="heart">💗</div>
 
-    <section id="projects">
-        <h2>Projelerim</h2>
-        <p>Henüz yolun başındayım ama her geçen gün gelişiyorum. Yakında burada harika işler olacak!</p>
-    </section>
+    <h1>Sana Küçük Bir Sürpriz 🌸</h1>
 
-    <section id="gallery">
-        <h2>Galeri</h2>
-        <div class="gallery">
-            <img src="https://placehold.co/300x200?text=Proje+1" alt="Proje 1">
-            <img src="https://placehold.co/300x200?text=Kod+Zamanı" alt="Kod Zamanı">
-            <img src="https://placehold.co/300x200?text=İlham+Kaynağı" alt="İlham Kaynağı">
-        </div>
-    </section>
+    <p>
+        Bazen bir insan, bir gülümsemesiyle bile günü güzelleştirebilir 🌷  
+        Sen benim için tam olarak öylesin.
+    </p>
 
-    <section id="blog">
-        <h2>Blog</h2>
-        <article>
-            <h3>İlk Adım: Hayallerin Peşinde</h3>
-            <p>Bugün kendi web sitemi yayına aldım. Daha yolun başındayım ama bu benim için büyük bir adım. Her şey hayalle başlar, şimdi sıra onları gerçekleştirmekte!</p>
-        </article>
-    </section>
+    <p>
+        Ne zaman adını duysam,  
+        içimde sebepsiz bir mutluluk oluyor 💕  
+        Bunu bilmeni istedim.
+    </p>
 
-    <section id="contact">
-        <h2>İletişim</h2>
-        <p>Bana ulaşmak istersen:</p>
-        <ul>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="mailto:seninmailin@example.com">Mail Gönder</a></li>
-        </ul>
-    </section>
+    <p>
+        Bu sayfa sadece sana özel ✨  
+        Çünkü sen de benim için özelsin.
+    </p>
 
-    <footer>
-        <p>© 2025 Samet Demir</p>
-    </footer>
+    <button onclick="alert('İyi ki varsın 💖')">
+        Bana Tıkla 😊
+    </button>
+
+    <div class="footer">
+        🌸 Her şey kalpten 🌸
+    </div>
+</div>
+
 </body>
 </html>
+
