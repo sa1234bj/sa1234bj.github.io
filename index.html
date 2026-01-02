@@ -1,118 +1,110 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>Yeni Yıla Seninle 💕</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Sana Bir Özür 💙</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffdee9, #b5fffc);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-<style>
-body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#ff9a9e,#fecfef);
-  font-family:Arial, sans-serif;
-  color:#5a1a2c;
-}
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
 
-.container{
-  background:#fff;
-  max-width:600px;
-  padding:28px;
-  border-radius:22px;
-  text-align:center;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
+        h1 {
+            color: #ff5e8a;
+            margin-bottom: 15px;
+        }
 
-h1{
-  font-size:2.1em;
-  margin-bottom:10px;
-}
+        p {
+            color: #444;
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
-p{
-  line-height:1.7;
-  font-size:1.05em;
-  margin:14px 0;
-}
+        .heart {
+            font-size: 40px;
+            margin: 15px 0;
+            animation: pulse 1.2s infinite;
+        }
 
-.divider{
-  width:60%;
-  height:2px;
-  margin:22px auto;
-  background:linear-gradient(to right,transparent,#ff69b4,transparent);
-}
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
 
-button{
-  margin-top:18px;
-  padding:14px 26px;
-  border:none;
-  border-radius:30px;
-  background:#ff5c8a;
-  color:#fff;
-  font-size:1.05em;
-  cursor:pointer;
-}
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff5e8a;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-button:active{
-  transform:scale(0.97);
-}
+        button:hover {
+            background: #e64a73;
+        }
 
-#message{
-  display:none;
-  margin-top:18px;
-  background:#ffeaf2;
-  padding:18px;
-  border-radius:16px;
-  font-size:1.05em;
-}
-
-footer{
-  margin-top:22px;
-  font-size:0.95em;
-}
-</style>
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            color: #333;
+            font-weight: 500;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
-  <h1>Yeni Yıla Seninle 💕</h1>
+<div class="card">
+    <h1>Özür Dilerim 💙</h1>
+    <div class="heart">❤️</div>
 
-  <p>
-    Bazen yollar ayrıldı,<br>
-    bazen suskunluklar oldu…<br>
-    ama kalpler hiçbir zaman kopmadı 🤍
-  </p>
+    <p>
+        Dün yaşananlar için gerçekten üzgünüm.  
+        Seni sorgular gibi davrandım ve bu hiç istemediğim bir şeydi.  
+        Kıskandım çünkü seni önemsiyorum…  
+        Ama bunu yanlış ifade ettim.
+    </p>
 
-  <div class="divider"></div>
+    <p>
+        Amacım seni kırmak değil,  
+        sadece kalbimdeki duyguları doğru anlatamamaktı.
+    </p>
 
-  <p>
-    Şimdi yeni bir yılın eşiğinde,<br>
-    yeniden el ele,<br>
-    yeniden umutla ✨
-  </p>
+    <button onclick="showMessage()">Kalbimi Açmak İstiyorum</button>
 
-  <!-- MESAJ BUTONU -->
-  <button onclick="showMessage()">Mesajı Gör 💌</button>
-
-  <!-- GİZLİ MESAJ -->
-  <div id="message">
-    Sen benim en güzel başlangıcımsın 💖<br>
-    Bu yıl da, her yıl da…<br>
-    Yanımda olmanı istiyorum 🌹
-  </div>
-
-  <footer>
-    Mutlu yıllar sevgilim 🎆
-  </footer>
+    <div id="extra" class="hidden">
+        <p>
+            Seni mutlu görmek benim için çok değerli.  
+            Konuşarak her şeyi düzeltebileceğimize inanıyorum 🌸  
+            Eğer istersen, ben buradayım…
+        </p>
+    </div>
 </div>
 
 <script>
-function showMessage(){
-  document.getElementById("message").style.display = "block";
-}
+    function showMessage() {
+        document.getElementById("extra").style.display = "block";
+    }
 </script>
 
 </body>
