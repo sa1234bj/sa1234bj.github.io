@@ -2,120 +2,115 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Sana Bir Özür 💙</title>
+    <title>Sakin Bir Özür</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             height: 100vh;
-            background: linear-gradient(135deg, #ffdee9, #b5fffc);
+            background: linear-gradient(135deg, #eef2f3, #dfe9f3);
             font-family: 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .card {
-            background: white;
+        .box {
+            background: #ffffff;
             width: 90%;
-            max-width: 420px;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            max-width: 460px;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
             text-align: center;
         }
 
         h1 {
-            color: #ff5e8a;
-            margin-bottom: 15px;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
         p {
-            color: #444;
+            color: #555;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.7;
+            margin-bottom: 15px;
         }
 
-        .heart {
-            font-size: 40px;
-            margin: 15px 0;
-            animation: pulse 1.2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+        .line {
+            width: 60px;
+            height: 3px;
+            background: #999;
+            margin: 20px auto;
+            border-radius: 5px;
         }
 
         button {
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #ff5e8a;
-            color: white;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #444;
+            color: #fff;
             border: none;
-            border-radius: 30px;
-            font-size: 16px;
+            border-radius: 25px;
+            font-size: 15px;
             cursor: pointer;
             transition: 0.3s;
         }
 
         button:hover {
-            background: #e64a73;
+            background: #222;
         }
 
         .hidden {
             display: none;
-            margin-top: 20px;
-            color: #333;
-            font-weight: 500;
+            margin-top: 25px;
+            color: #444;
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <h1>Özür Dilerim 💙</h1>
-    <div class="heart">❤️</div>
+<div class="box">
+    <h1>Sana Dürüstçe Yazıyorum</h1>
 
     <p>
-        Dün yaşananlar için gerçekten üzgünüm.  
-        Seni sorgular gibi davrandım ve bu hiç istemediğim bir şeydi.  
-        Kıskandım çünkü seni önemsiyorum…  
-        Ama bunu yanlış ifade ettim.
+        Dün yaşananlarda hatam olduğunu kabul ediyorum.  
+        Duygularımı doğru ifade edemedim ve bu seni incitti.
+    </p>
+
+    <div class="line"></div>
+
+    <p>
+        Niyetim sorgulamak ya da kontrol etmek değildi.  
+        Kıskançlığımı yönetemedim ve bu benim sorumluluğum.
     </p>
 
     <p>
-        Amacım seni kırmak değil,  
-        sadece kalbimdeki duyguları doğru anlatamamaktı.
+        Söylediklerinin ağırlığını anladım.  
+        Bu yüzden seni zorlamak, ısrar etmek istemiyorum.
     </p>
 
-    <button onclick="showMessage()">Kalbimi Açmak İstiyorum</button>
+    <button onclick="openText()">Devamını Okumak İstersen</button>
 
     <div id="extra" class="hidden">
         <p>
-            Seni mutlu görmek benim için çok değerli.  
-            Konuşarak her şeyi düzeltebileceğimize inanıyorum 🌸  
-            Eğer istersen, ben buradayım…
+            Eğer bu noktada konuşmak istemiyorsan, buna saygı duyarım.  
+            Sadece bilmeni isterim ki, pişmanlığım gerçek ve samimi.
+        </p>
+
+        <p>
+            Kararın ne olursa olsun, sana iyi gelmesini dilerim.
         </p>
     </div>
 </div>
 
 <script>
-    function showMessage() {
+    function openText() {
         document.getElementById("extra").style.display = "block";
     }
 </script>
 
 </body>
 </html>
-
-
-
-
-   
-
-
- 
-
- 
