@@ -17,11 +17,13 @@
       padding: 20px;
       text-align: center;
       border-bottom: 2px solid #d7b76a;
+      animation: fadeIn 2s ease-in-out;
     }
     header h1 {
       margin: 0;
       font-size: 2.2em;
       color: #d7b76a;
+      animation: glow 3s infinite alternate;
     }
     header p {
       margin: 5px 0 0;
@@ -34,6 +36,7 @@
       background: #121216;
       border-radius: 12px;
       border: 1px solid #1e1e25;
+      animation: slideUp 1.5s ease;
     }
     h2 {
       color: #d7b76a;
@@ -44,6 +47,7 @@
       border-left: 4px solid #d7b76a;
       padding-left: 12px;
       margin: 20px 0;
+      animation: fadeIn 2s ease-in-out;
     }
     .badges {
       display: flex;
@@ -56,6 +60,20 @@
       border-radius: 8px;
       padding: 8px 12px;
       font-size: 0.9em;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .badge:hover {
+      transform: scale(1.1);
+      background: #d7b76a;
+      color: #0b0b0d;
+    }
+    a {
+      color: #d7b76a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #f5d67a;
     }
     footer {
       text-align: center;
@@ -63,6 +81,20 @@
       color: #a7a7b2;
       border-top: 1px solid #1e1e25;
       margin-top: 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    /* Animasyonlar */
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #d7b76a; }
+      to { text-shadow: 0 0 20px #d7b76a, 0 0 30px #d7b76a; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
@@ -99,8 +131,9 @@
     <h2>Bağlantılar</h2>
     <p>Takip için:</p>
     <ul>
-      <li>Instagram: <a href="#">@samet_web2025</a></li>
-    
+      <li>Instagram: <a href="#">@samet</a></li>
+      <li>Twitter/X: <a href="#">@samet</a></li>
+      <li>LinkedIn: <a href="#">Samet</a></li>
     </ul>
   </section>
 
@@ -109,3 +142,4 @@
   </footer>
 </body>
 </html>
+
