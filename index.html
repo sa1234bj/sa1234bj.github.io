@@ -1,116 +1,112 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Sakin Bir Özür</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: linear-gradient(135deg, #f5dce6, #f0c7d8);
-            font-family: 'Segoe UI', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .box {
-            background: #ffffff;
-            width: 90%;
-            max-width: 460px;
-            padding: 35px;
-            border-radius: 18px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-
-        .line {
-            width: 60px;
-            height: 3px;
-            background: #d18aa5;
-            margin: 20px auto;
-            border-radius: 5px;
-        }
-
-        button {
-            margin-top: 25px;
-            padding: 12px 28px;
-            background: #d16c8f;
-            color: #fff;
-            border: none;
-            border-radius: 25px;
-            font-size: 15px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #b85777;
-        }
-
-        .hidden {
-            display: none;
-            margin-top: 25px;
-            color: #444;
-            font-size: 15px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samet — Sessiz Güç</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0b0b0d;
+      color: #eaeaf2;
+    }
+    header {
+      background: #121216;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #d7b76a;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      color: #d7b76a;
+    }
+    header p {
+      margin: 5px 0 0;
+      color: #a7a7b2;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #121216;
+      border-radius: 12px;
+      border: 1px solid #1e1e25;
+    }
+    h2 {
+      color: #d7b76a;
+      margin-top: 0;
+    }
+    .quote {
+      font-size: 1.2em;
+      border-left: 4px solid #d7b76a;
+      padding-left: 12px;
+      margin: 20px 0;
+    }
+    .badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: #0f1015;
+      border: 1px solid #1e1e25;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.9em;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #a7a7b2;
+      border-top: 1px solid #1e1e25;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Samet</h1>
+    <p>Sessiz Güç • Net Başarı</p>
+  </header>
 
-<div class="box">
-    <h1>Sana Dürüstçe Yazıyorum</h1>
-
-    <p>
-        Dün yaşananlarda hatam olduğunu kabul ediyorum.  
-        Duygularımı doğru ifade edemedim ve bu seni incitti.
-    </p>
-
-    <div class="line"></div>
-
-    <p>
-        Niyetim sorgulamak ya da kontrol etmek değildi.  
-        Kıskançlığımı yönetemedim ve bu benim sorumluluğum.
-    </p>
-
-    <p>
-        Söylediklerinin ağırlığını anladım.  
-        Bu yüzden seni zorlamak ya da ısrar etmek istemiyorum.
-    </p>
-
-    <button onclick="openText()">Devamını Okumak İstersen</button>
-
-    <div id="extra" class="hidden">
-        <p>
-            Eğer bu noktada konuşmak istemiyorsan, buna saygı duyarım.  
-            Sadece bilmeni isterim ki, pişmanlığım gerçek ve samimi.
-        </p>
-
-        <p>
-            Kararın ne olursa olsun, sana iyi gelmesini dilerim.
-        </p>
+  <section>
+    <h2>Hakkımda</h2>
+    <p>Şehirle köy arasında dengede duran, gereksiz gürültüye değil net sonuçlara odaklanan biriyim. 
+    Ailemi, planı ve sermayeyi aynı çizgide yürütürüm.</p>
+    <div class="badges">
+      <div class="badge">Liderlik</div>
+      <div class="badge">Strateji</div>
+      <div class="badge">Minimalizm</div>
+      <div class="badge">Yatırım Disiplini</div>
     </div>
-</div>
+    <div class="quote">“Az konuşurum. Tam isabet yaparım. Sahne bende.”</div>
+  </section>
 
-<script>
-    function openText() {
-        document.getElementById("extra").style.display = "block";
-    }
-</script>
+  <section>
+    <h2>İşlerim</h2>
+    <p>Kısa içerikler, güçlü sahne tasarımları ve net planlar. Az söz, çok iz bırakma.</p>
+    <ul>
+      <li>Minimal Reels • Sessiz müzik</li>
+      <li>Kişisel marka • Altın vuruş detay</li>
+      <li>Aile–okul–sermaye senkron</li>
+    </ul>
+  </section>
 
+  <section>
+    <h2>Bağlantılar</h2>
+    <p>Takip için:</p>
+    <ul>
+      <li>Instagram: <a href="#">@samet</a></li>
+      <li>Twitter/X: <a href="#">@samet</a></li>
+      <li>LinkedIn: <a href="#">Samet</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2026 Samet — Sessiz Güç
+  </footer>
 </body>
 </html>
