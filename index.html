@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Irmak’a Küçük Bir Not</title>
+<title>Aşkım İçin</title>
 <style>
     body {
         margin: 0;
@@ -16,31 +16,27 @@
     }
     .card {
         background: #ffffff;
-        padding: 30px;
-        border-radius: 24px;
+        padding: 32px;
+        border-radius: 26px;
         max-width: 380px;
         text-align: center;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.18);
-        animation: fadeIn 1.2s ease;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+        animation: fadeIn 1s ease;
     }
     h1 {
         color: #e75480;
-        margin-bottom: 15px;
+        margin-bottom: 18px;
         font-weight: 600;
     }
     p {
         font-size: 16px;
         color: #444;
         line-height: 1.7;
-        margin-bottom: 12px;
-    }
-    .strong {
-        color: #e75480;
-        font-weight: 600;
+        margin-bottom: 14px;
     }
     button {
-        margin-top: 20px;
-        padding: 14px 26px;
+        margin-top: 18px;
+        padding: 14px 28px;
         border: none;
         border-radius: 30px;
         background: #e75480;
@@ -52,6 +48,17 @@
     button:hover {
         background: #d9436f;
     }
+    .hidden-message {
+        display: none;
+        margin-top: 22px;
+        padding: 20px;
+        border-radius: 18px;
+        background: #fff0f5;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.8;
+        animation: fadeIn 0.8s ease;
+    }
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
@@ -61,40 +68,33 @@
 <body>
 
 <div class="card">
-    <h1>Irmak 🌸</h1>
+    <h1>Aşkım 🌸</h1>
 
     <p>
         Bunu yazmamın sebebi bir şeyleri uzatmak değil,<br>
-        sadece içimden geleni <span class="strong">dürüstçe</span> söylemek.
+        sadece kalbimden geçenleri sakin bir şekilde anlatmak.
     </p>
 
     <p>
-        Konuşurken bazen kelimeler eksik kalabiliyor ama<br>
-        niyetim her zaman <span class="strong">iyi ve net</span>.
+        Seninle aramdaki bağ benim için çok kıymetli.<br>
+        O yüzden bu küçük notu bırakmak istedim.
     </p>
 
-    <p>
-        Seninle iletişimin kıymetli olduğunu bilmeni istedim.<br>
-        Sakin, açık ve gerçek bir şekilde.
-    </p>
+    <button onclick="showMessage()">Buna Tıklar mısın?</button>
 
-    <button onclick="showMessage()">
-        Buna Tıklar mısın?
-    </button>
+    <div id="message" class="hidden-message">
+        Dünden beri küs kalmak bana çok ağır geldi,<br>
+        sensiz geçen her dakika eksik hissettiriyor.<br><br>
+        Ne olur barışalım,<br>
+        çünkü sen benim <b>en güzel yanım</b>’sın 🤍
+    </div>
 </div>
 
 <script>
 function showMessage() {
-    alert(
-        "Irmak,\n\n" +
-        "Seni mutlu görmek benim için önemli.\n" +
-        "Yanındayken de uzaktayken de sana karşı niyetim hep aynı:\n" +
-        "saygı, değer ve samimiyet.\n\n" +
-        "Gülümsemen çok yakışıyor 🌸"
-    );
+    document.getElementById("message").style.display = "block";
 }
 </script>
 
 </body>
 </html>
-
