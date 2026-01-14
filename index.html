@@ -1,68 +1,88 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>İyi Ki Varsın</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 50px 40px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            max-width: 400px;
-            animation: fadeIn 1.5s ease;
-        }
-
-        h1 {
-            color: #e75480;
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            color: #555;
-            font-size: 18px;
-        }
-
-        .heart {
-            font-size: 40px;
-            margin: 20px 0;
-            animation: beat 1s infinite;
-        }
-
-        @keyframes beat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irmak’a Küçük Bir Not 💗</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .card {
+        background: #fff;
+        padding: 28px;
+        border-radius: 22px;
+        max-width: 360px;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        animation: fadeIn 1s ease;
+    }
+    h1 {
+        color: #ff4f8b;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+    }
+    .highlight {
+        color: #ff4f8b;
+        font-weight: bold;
+    }
+    button {
+        margin-top: 18px;
+        padding: 12px 22px;
+        border: none;
+        border-radius: 25px;
+        background: #ff4f8b;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #e84378;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+</style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>İyi ki varsın güzellik 💗</h1>
-        <div class="heart">💖</div>
-        <p>
-            Gülüşün bile bu sayfayı güzelleştirdi.  
-            Hep böyle güzel kal 🌸
-        </p>
-    </div>
+<div class="card">
+    <h1>Irmak 🌸</h1>
+
+    <p>
+        Dün gece biraz şakalaşıyorduk,<br>
+        sanırım <span class="highlight">naz modu</span> erken açıldı 😄
+    </p>
+
+    <p>
+        Küçük bir not bırakmak istedim çünkü<br>
+        bazı şeyler yazıyla daha güzel oluyor.
+    </p>
+
+    <p>
+        Trip değil,<br>
+        <span class="highlight">gülümsemeli sohbet</span> tarafındayım ben 😌
+    </p>
+
+    <p>
+        Konuşmak istersen her zaman buradayım 💗
+    </p>
+
+    <button onclick="alert('Naz tamamlandı 😄 Şimdi gülümseme sırası 🌸')">
+        Bunu Tıklarsan 💕
+    </button>
+</div>
 
 </body>
 </html>
