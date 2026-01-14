@@ -68,4 +68,58 @@
 <body>
 
 <div class="card">
-    <h1>Aşkım 🌸
+    <h1>Aşkım 🌸</h1>
+
+    <p>
+        Bunu yazmamın sebebi bir şeyleri uzatmak değil,<br>
+        sadece kalbimden geçenleri sakin bir şekilde anlatmak.
+    </p>
+
+    <p>
+        Seninle aramdaki bağ benim için çok kıymetli.<br>
+        O yüzden bu küçük notu bırakmak istedim.
+    </p>
+
+    <button onclick="showMessage()">Buna Tıklar mısın?</button>
+
+    <div id="message" class="hidden-message">
+        Dünden beri küs kalmak bana çok ağır geldi,<br>
+        sensiz geçen her dakika eksik hissettiriyor.<br><br>
+        Ne olur barışalım,<br>
+        çünkü sen benim <b>en güzel yanım</b>’sın 🤍
+    </div>
+</div>
+
+<!-- MÜZİK -->
+<audio id="music">
+    <source src="muzik.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let musicStarted = false;
+
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+
+    if (!musicStarted) {
+        const music = document.getElementById("music");
+        music.volume = 0.15;     // kısık başlar
+        music.play();
+        musicStarted = true;
+
+        // Yavaşça sesi artır (fade-in)
+        let vol = 0.15;
+        const fade = setInterval(() => {
+            if (vol < 0.6) {
+                vol += 0.02;
+                music.volume = vol;
+            } else {
+                clearInterval(fade);
+            }
+        }, 200);
+    }
+}
+</script>
+
+</body>
+</html>
