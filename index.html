@@ -3,55 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Irmak’a Küçük Bir Not 💗</title>
+<title>Irmak’a Küçük Bir Not</title>
 <style>
     body {
         margin: 0;
         font-family: 'Segoe UI', Arial, sans-serif;
-        background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
+        background: linear-gradient(135deg, #f8cdda, #fbc2eb);
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
     }
     .card {
-        background: #fff;
-        padding: 28px;
-        border-radius: 22px;
-        max-width: 360px;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 24px;
+        max-width: 380px;
         text-align: center;
-        box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-        animation: fadeIn 1s ease;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+        animation: fadeIn 1.2s ease;
     }
     h1 {
-        color: #ff4f8b;
-        margin-bottom: 10px;
+        color: #e75480;
+        margin-bottom: 15px;
+        font-weight: 600;
     }
     p {
         font-size: 16px;
         color: #444;
-        line-height: 1.6;
+        line-height: 1.7;
+        margin-bottom: 12px;
     }
-    .highlight {
-        color: #ff4f8b;
-        font-weight: bold;
+    .strong {
+        color: #e75480;
+        font-weight: 600;
     }
     button {
-        margin-top: 18px;
-        padding: 12px 22px;
+        margin-top: 20px;
+        padding: 14px 26px;
         border: none;
-        border-radius: 25px;
-        background: #ff4f8b;
+        border-radius: 30px;
+        background: #e75480;
         color: #fff;
         font-size: 16px;
         cursor: pointer;
+        transition: 0.3s;
     }
     button:hover {
-        background: #e84378;
+        background: #d9436f;
     }
     @keyframes fadeIn {
-        from { opacity: 0; transform: scale(0.95); }
-        to { opacity: 1; transform: scale(1); }
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 </style>
 </head>
@@ -61,28 +64,37 @@
     <h1>Irmak 🌸</h1>
 
     <p>
-        Dün gece biraz şakalaşıyorduk,<br>
-        sanırım <span class="highlight">naz modu</span> erken açıldı 😄
+        Bunu yazmamın sebebi bir şeyleri uzatmak değil,<br>
+        sadece içimden geleni <span class="strong">dürüstçe</span> söylemek.
     </p>
 
     <p>
-        Küçük bir not bırakmak istedim çünkü<br>
-        bazı şeyler yazıyla daha güzel oluyor.
+        Konuşurken bazen kelimeler eksik kalabiliyor ama<br>
+        niyetim her zaman <span class="strong">iyi ve net</span>.
     </p>
 
     <p>
-        Trip değil,<br>
-        <span class="highlight">gülümsemeli sohbet</span> tarafındayım ben 😌
+        Seninle iletişimin kıymetli olduğunu bilmeni istedim.<br>
+        Sakin, açık ve gerçek bir şekilde.
     </p>
 
-    <p>
-        Konuşmak istersen her zaman buradayım 💗
-    </p>
-
-    <button onclick="alert('Naz tamamlandı 😄 Şimdi gülümseme sırası 🌸')">
-        Bunu Tıklarsan 💕
+    <button onclick="showMessage()">
+        Buna Tıklar mısın?
     </button>
 </div>
 
+<script>
+function showMessage() {
+    alert(
+        "Irmak,\n\n" +
+        "Seni mutlu görmek benim için önemli.\n" +
+        "Yanındayken de uzaktayken de sana karşı niyetim hep aynı:\n" +
+        "saygı, değer ve samimiyet.\n\n" +
+        "Gülümsemen çok yakışıyor 🌸"
+    );
+}
+</script>
+
 </body>
 </html>
+
